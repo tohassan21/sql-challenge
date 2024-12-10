@@ -59,6 +59,7 @@ OR d.dept_name = 'Development';
 
 -- List the frequency counts, in descending order, of all the employee last names 
 -- (that is, how many employees share each last name) (4 points)
-SELECT * FROM "Employees";
-
-
+SELECT last_name, COUNT(last_name) AS "frequency" 
+FROM "Employees"
+GROUP BY last_name
+ORDER BY "frequency" DESC;
